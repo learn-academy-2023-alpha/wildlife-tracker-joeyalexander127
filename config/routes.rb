@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :sightings
   resources :animals
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  post '/animal/:id/sightings' => 'sightings#create'
 
   # Defines the root path route ("/")
   # root "articles#index"
